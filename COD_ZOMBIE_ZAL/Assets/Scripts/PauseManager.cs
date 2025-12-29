@@ -3,34 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public GameObject pauseMenuUI;   
-    public GameObject tutorialPanel; 
-
-    public static bool isPaused = false;
+    public GameObject pauseMenuUI; 
+    private bool isPaused = false;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (tutorialPanel.activeSelf)
-            {
-                CloseTutorial();
-            }
-            else if (isPaused)
-            {
+            if (isPaused)
                 Resume();
-            }
             else
-            {
                 Pause();
-            }
         }
     }
 
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        tutorialPanel.SetActive(false);
         Time.timeScale = 1f; 
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked; 
@@ -40,38 +29,14 @@ public class PauseManager : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
-        tutorialPanel.SetActive(false); 
         Time.timeScale = 0f; 
         isPaused = true;
         Cursor.lockState = CursorLockMode.None; 
         Cursor.visible = true;
     }
 
-    public void ToggleTutorial()
+    public void QuitGame()
     {
-        bool czyTutorialJestWlaczony = tutorialPanel.activeSelf;
-        
-        if (czyTutorialJestWlaczony)
-        {
-            tutorialPanel.SetActive(false);
-            pauseMenuUI.SetActive(true);
-        }
-        else
-        {
-            tutorialPanel.SetActive(true);
-            pauseMenuUI.SetActive(false);
-        }
-    }
-
-    public void CloseTutorial()
-    {
-        tutorialPanel.SetActive(false);
-        pauseMenuUI.SetActive(true);
-    }
-
-    public void QuitToMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu"); 
+        Application.Quit(); 
     }
 }
