@@ -14,3 +14,4 @@ Viking Village: Elementy otoczenia i mapa.
 Font pobrany z DaFont.com
 Reszta dźwięków pobrana z pixabay
 Grafika w menu głównym wygenerowana przy użyciu ChatGPT
+Grafika Pegi18 pobrana z WikiMediaCommons
