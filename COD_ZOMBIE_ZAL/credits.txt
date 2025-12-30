@@ -1,0 +1,16 @@
+Zombie Survival - Projekt Akademicki
+
+Projekt gry typu First-Person Shooter stworzony w ramach realizacji studiów
+
+Wykorzystane Technologie
+Silnik: Unity 6 
+Język: C#
+
+Biblioteki i zasoby (Assety)
+W projekcie wykorzystano następujące zasoby zewnętrzne
+Infima Games (Low Poly Shooter Pack): modele broni oraz dźwięki broni.
+Zombie Horror Package: Modele przeciwników, dźwięk oraz animacje.
+Viking Village: Elementy otoczenia i mapa.
+Font pobrany z DaFont.com
+Reszta dźwięków pobrana z pixabay
+Grafika w menu głównym wygenerowana przy użyciu ChatGPT
